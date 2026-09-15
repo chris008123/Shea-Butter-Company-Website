@@ -1,0 +1,10 @@
+{
+  "description": "A premium B2B website showcasing Ghanaian shea butter and nuts for international buyers, emphasizing quality, sustainability, and bulk supply enquiries.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
