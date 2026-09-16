@@ -45,7 +45,7 @@ export default function Header() {
             </svg>
           </div>
           <div className="leading-tight">
-            <div className="font-serif text-[15px] font-600 text-[#1A1A18] tracking-wide">Sirius</div>
+            <div className="font-serif text-[15px] font-600 text-[#1A1A18] tracking-wide">Sirius Shea Butter</div>
             <div className="text-[9px] uppercase tracking-[0.15em] text-[#6B6356] font-medium">Ghana · West Africa</div>
           </div>
         </Link>

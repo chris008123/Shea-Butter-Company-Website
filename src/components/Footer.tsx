@@ -18,7 +18,7 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <div className="font-serif text-[15px] text-[#FAF8F3] font-600">Afri Shea</div>
+                <div className="font-serif text-[15px] text-[#FAF8F3] font-600">Sirius Shea Butter</div>
                 <div className="text-[9px] uppercase tracking-[0.15em] text-[#6B6356]">Ghana · West Africa</div>
               </div>
             </div>
@@ -78,12 +78,12 @@ export default function Footer() {
               <li className="leading-relaxed">Accra, Ghana<br />West Africa</li>
               <li>
                 <a href="mailto:info@afrishea.com" className="hover:text-[#EDE4D3] transition-colors">
-                  info@afrishea.com
+                  info@sirius.com
                 </a>
               </li>
               <li>
-                <a href="tel:+233000000000" className="hover:text-[#EDE4D3] transition-colors">
-                  +233 000 000 000
+                <a href="tel:+233541087863" className="hover:text-[#EDE4D3] transition-colors">
+                  +233 54 108 7863
                 </a>
               </li>
             </ul>
