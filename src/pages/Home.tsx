@@ -73,11 +73,16 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1535940360221-641a69c43bac?w=1920&h=1080&fit=crop&auto=format"
-            alt="Acacia trees across golden West African savanna"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="https://images.unsplash.com/photo-1535940360221-641a69c43bac?w=1920&h=1080&fit=crop&auto=format"
             className="w-full h-full object-cover"
-          />
+          >
+            <source src="/videos/shea-Andrew.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A18]/80 via-[#1A1A18]/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A18]/40 to-transparent" />
         </div>
@@ -156,7 +161,7 @@ export default function Home() {
             <RevealSection>
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1665904285523-47c0a6fdfc0e?w=800&h=950&fit=crop&auto=format"
+                  src="https://www.pexels.com/photo/women-preparing-yams-in-tamale-ghana-30279828/"
                   alt="Baskets of shea nuts from Ghana"
                   className="w-full h-[520px] object-cover"
                 />
