@@ -182,7 +182,7 @@ export default function Home() {
                   <span className="text-[11px] uppercase tracking-[0.2em] text-[#B8860B] font-medium">About Us</span>
                 </div>
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1A1A18] leading-tight mb-5 sm:mb-6">
-                  From the shea parklands of Ghana to global markets.
+                  From the shea Nyankpala of Ghana to global markets.
                 </h2>
                 <p className="text-[14px] sm:text-[15px] text-[#6B6356] leading-relaxed mb-4 sm:mb-5">
                   We operate within the West African shea value chain, supplying international businesses with unrefined shea butter and raw shea nuts directly sourced from the producing communities of northern Ghana.
