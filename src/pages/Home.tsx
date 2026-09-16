@@ -160,16 +160,20 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
             <RevealSection>
               <div className="relative">
-                <img
-                  src="https://images.pexels.com/photos/5208267/pexels-photo-5208267.jpeg"
-                  alt="Baskets of shea nuts from Ghana"
-                  className="w-full h-[280px] sm:h-[380px] lg:h-[520px] object-cover"
-                />
-                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-[#2C4A3E] text-white p-5 sm:p-6 w-40 sm:w-48 hidden sm:block">
-                  <div className="font-serif text-2xl sm:text-3xl font-bold text-[#B8860B] mb-1">Ghana</div>
-                  <div className="text-[11px] uppercase tracking-widest text-white/70">Origin</div>
-                </div>
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster="https://images.pexels.com/photos/5208267/pexels-photo-5208267.jpeg"
+                className="w-full h-[280px] sm:h-[380px] lg:h-[520px] object-cover"
+              >
+                <source src="/videos/shea-Andrew.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-[#2C4A3E] text-white p-5 sm:p-6 w-40 sm:w-48 hidden sm:block">
+                <div className="font-serif text-2xl sm:text-3xl font-bold text-[#B8860B] mb-1">Ghana</div>
+                <div className="text-[11px] uppercase tracking-widest text-white/70">Origin</div>
               </div>
+            </div>
             </RevealSection>
             <RevealSection delay={150}>
               <div className="max-w-lg">
