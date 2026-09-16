@@ -83,12 +83,12 @@ export default function Home() {
           >
             <source src="/videos/shea-Andrew.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A18]/80 via-[#1A1A18]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A18]/75 via-[#1A1A18]/30 via-40% to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A18]/40 to-transparent" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-20">
-          <div className="max-w-2xl">
+        <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-20 flex justify-start">
+          <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 mb-8">
               <span className="w-8 h-px bg-[#B8860B]" />
               <span className="text-[11px] uppercase tracking-[0.2em] text-[#B8860B] font-medium">Ghana · West Africa</span>
@@ -161,7 +161,7 @@ export default function Home() {
             <RevealSection>
               <div className="relative">
                 <img
-                  src="https://www.pexels.com/photo/women-preparing-yams-in-tamale-ghana-30279828/"
+                  src="https://images.pexels.com/photos/5208267/pexels-photo-5208267.jpeg"
                   alt="Baskets of shea nuts from Ghana"
                   className="w-full h-[520px] object-cover"
                 />
