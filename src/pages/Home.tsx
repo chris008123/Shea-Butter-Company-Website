@@ -1,5 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
+import {
+  TreePine,
+  ShoppingBasket,
+  CheckCircle2,
+  Cog,
+  Package2,
+  FlaskConical,
+  PackageCheck,
+  Warehouse,
+  Ship,
+  Globe2,
+  Plane,
+  FileText,
+} from "lucide-react";
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,16 +45,16 @@ function RevealSection({ children, className = "", delay = 0 }: { children: Reac
 }
 
 const supplyChainSteps = [
-  { icon: "🌳", label: "Shea Parklands", desc: "Northern Ghana" },
-  { icon: "🧺", label: "Community Collection", desc: "Women-led sourcing" },
-  { icon: "✅", label: "Quality Selection", desc: "Grading & sorting" },
-  { icon: "⚙️", label: "Processing", desc: "Careful extraction" },
-  { icon: "🫙", label: "Shea Butter", desc: "Unrefined output" },
-  { icon: "🔬", label: "Quality Control", desc: "Standards assurance" },
-  { icon: "📦", label: "Packaging", desc: "Export-ready format" },
-  { icon: "🏭", label: "Warehousing", desc: "Secure storage" },
-  { icon: "🚢", label: "Logistics", desc: "International freight" },
-  { icon: "🌍", label: "Destination", desc: "Global buyers" },
+  { icon: TreePine, label: "Shea Parklands", desc: "Northern Ghana" },
+  { icon: ShoppingBasket, label: "Community Collection", desc: "Women-led sourcing" },
+  { icon: CheckCircle2, label: "Quality Selection", desc: "Grading & sorting" },
+  { icon: Cog, label: "Processing", desc: "Careful extraction" },
+  { icon: Package2, label: "Shea Butter", desc: "Unrefined output" },
+  { icon: FlaskConical, label: "Quality Control", desc: "Standards assurance" },
+  { icon: PackageCheck, label: "Packaging", desc: "Export-ready format" },
+  { icon: Warehouse, label: "Warehousing", desc: "Secure storage" },
+  { icon: Ship, label: "Logistics", desc: "International freight" },
+  { icon: Globe2, label: "Destination", desc: "Global buyers" },
 ];
 
 const industries = [
@@ -59,6 +73,13 @@ const whyChooseUs = [
   { title: "Quality Focus", desc: "Careful handling, processing and quality control throughout each stage of production." },
   { title: "Export Capability", desc: "Prepared to serve international customers across key global markets with appropriate documentation." },
   { title: "Responsible Sourcing", desc: "Supporting communities and protecting the shea ecosystem through ethical procurement practices." },
+];
+
+const logistics = [
+  { title: "Sea Freight", desc: "Large-volume shipments via ocean freight from Ghanaian ports.", icon: Ship },
+  { title: "Air Freight", desc: "Urgent or smaller shipments where air freight is appropriate.", icon: Plane },
+  { title: "FCL", desc: "Full container loads for large international buyers.", icon: Package2 },
+  { title: "Documentation", desc: "Export documentation, certificates and shipping support.", icon: FileText },
 ];
 
 export default function Home() {
@@ -160,20 +181,20 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
             <RevealSection>
               <div className="relative">
-              <video
-                controls
-                playsInline
-                preload="metadata"
-                poster="https://images.pexels.com/photos/5208267/pexels-photo-5208267.jpeg"
-                className="w-full h-[280px] sm:h-[380px] lg:h-[520px] object-cover"
-              >
-                <source src="/videos/shea-Andrew.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-[#2C4A3E] text-white p-5 sm:p-6 w-40 sm:w-48 hidden sm:block">
-                <div className="font-serif text-2xl sm:text-3xl font-bold text-[#B8860B] mb-1">Ghana</div>
-                <div className="text-[11px] uppercase tracking-widest text-white/70">Origin</div>
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster="https://images.pexels.com/photos/5208267/pexels-photo-5208267.jpeg"
+                  className="w-full h-[290px] sm:h-[400px] lg:h-[550px] object-cover"
+                >
+                  <source src="/videos/shea-Andrew.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-[#2C4A3E] text-white p-4 sm:p-5 w-28 sm:w-32 rounded-2xl shadow-xl shadow-black/20 hidden sm:block transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                  <div className="font-serif text-xl sm:text-2xl font-bold text-[#B8860B] mb-1">Ghana</div>
+                  <div className="text-[10px] uppercase tracking-widest text-white/70">Origin</div>
+                </div>
               </div>
-            </div>
             </RevealSection>
             <RevealSection delay={150}>
               <div className="max-w-lg">
@@ -380,23 +401,26 @@ export default function Home() {
 
           {/* Desktop: horizontal scroll */}
           <div className="hidden md:flex items-start gap-0 overflow-x-auto pb-4">
-            {supplyChainSteps.map((step, i) => (
-              <div
-                key={step.label}
-                className={`flex-shrink-0 flex flex-col items-center text-center transition-all duration-500 cursor-pointer px-4 ${
-                  activeStep === i ? "opacity-100" : "opacity-40"
-                }`}
-                onClick={() => setActiveStep(i)}
-              >
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl mb-3 transition-colors ${
-                  activeStep === i ? "bg-[#B8860B]" : "bg-[#2C2C2A]"
-                }`}>
-                  {step.icon}
+            {supplyChainSteps.map((step, i) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={step.label}
+                  className={`flex-shrink-0 flex flex-col items-center text-center transition-all duration-500 cursor-pointer px-4 ${
+                    activeStep === i ? "opacity-100" : "opacity-40"
+                  }`}
+                  onClick={() => setActiveStep(i)}
+                >
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-3 transition-colors ${
+                    activeStep === i ? "bg-[#B8860B]" : "bg-[#2C2C2A]"
+                  }`}>
+                    <Icon size={20} className="text-white" strokeWidth={1.75} />
+                  </div>
+                  <div className="text-[12px] font-medium text-white mb-1 whitespace-nowrap">{step.label}</div>
+                  <div className="text-[11px] text-white/40">{step.desc}</div>
                 </div>
-                <div className="text-[12px] font-medium text-white mb-1 whitespace-nowrap">{step.label}</div>
-                <div className="text-[11px] text-white/40">{step.desc}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Connector line for desktop */}
@@ -411,17 +435,20 @@ export default function Home() {
 
           {/* Mobile: vertical */}
           <div className="md:hidden space-y-4">
-            {supplyChainSteps.map((step, i) => (
-              <div key={step.label} className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#2C4A3E] flex items-center justify-center text-lg flex-shrink-0">
-                  {step.icon}
+            {supplyChainSteps.map((step) => {
+              const Icon = step.icon;
+              return (
+                <div key={step.label} className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[#2C4A3E] flex items-center justify-center flex-shrink-0">
+                    <Icon size={18} className="text-white" strokeWidth={1.75} />
+                  </div>
+                  <div>
+                    <div className="text-[13px] font-medium text-white">{step.label}</div>
+                    <div className="text-[12px] text-white/40">{step.desc}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-[13px] font-medium text-white">{step.label}</div>
-                  <div className="text-[12px] text-white/40">{step.desc}</div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -482,18 +509,18 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:col-span-2 grid grid-cols-2 gap-3 sm:gap-4">
-                {[
-                  { title: "Sea Freight", desc: "Large-volume shipments via ocean freight from Ghanaian ports.", icon: "🚢" },
-                  { title: "Air Freight", desc: "Urgent or smaller shipments where air freight is appropriate.", icon: "✈️" },
-                  { title: "FCL", desc: "Full container loads for large international buyers.", icon: "📦" },
-                  { title: "Documentation", desc: "Export documentation, certificates and shipping support.", icon: "📋" },
-                ].map((item) => (
-                  <div key={item.title} className="border border-[#D6CABB] p-4 sm:p-6 hover:border-[#2C4A3E] transition-colors">
-                    <div className="text-xl sm:text-2xl mb-3 sm:mb-4">{item.icon}</div>
-                    <h3 className="font-medium text-[14px] sm:text-[15px] text-[#1A1A18] mb-2">{item.title}</h3>
-                    <p className="text-[12px] sm:text-[13px] text-[#6B6356] leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
+                {logistics.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={item.title} className="border border-[#D6CABB] p-4 sm:p-6 hover:border-[#2C4A3E] transition-colors">
+                      <div className="mb-3 sm:mb-4">
+                        <Icon size={24} className="text-[#2C4A3E]" strokeWidth={1.75} />
+                      </div>
+                      <h3 className="font-medium text-[14px] sm:text-[15px] text-[#1A1A18] mb-2">{item.title}</h3>
+                      <p className="text-[12px] sm:text-[13px] text-[#6B6356] leading-relaxed">{item.desc}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </RevealSection>

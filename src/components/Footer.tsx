@@ -93,7 +93,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[12px] text-[#5A5348]">
-            © {year} Afri Shea Ltd. All rights reserved.
+            © {year} Sirius Shea Butter Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {[
